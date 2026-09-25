@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Biru muda — untuk ActionBar & primary -->
+    <color name="colorPrimary">#42A5F5</color>
+    <color name="colorPrimaryDark">#1E88E5</color>
+    <color name="colorPrimaryVariant">#90CAF9</color>
+
+    <!-- Merah-orange — untuk semua button -->
+    <color name="colorButton">#FF5722</color>
+    <color name="colorButtonText">#FFFFFF</color>
+</resources>

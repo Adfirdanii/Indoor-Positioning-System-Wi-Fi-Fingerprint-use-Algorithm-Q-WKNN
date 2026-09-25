@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.MyQwknn" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorButton</item>
+    </style>
+
+    <style name="Theme.MyQwknn" parent="Base.Theme.MyQwknn" />
+
+    <!-- Theme untuk SplashActivity — tanpa action bar -->
+    <style name="Theme.MyQwknn.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorButton</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:statusBarColor">#1A237E</item>
+    </style>
+
+</resources>

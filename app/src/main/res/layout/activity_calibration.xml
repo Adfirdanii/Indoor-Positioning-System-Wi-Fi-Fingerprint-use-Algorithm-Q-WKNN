@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kalibrasi Reference Point"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/et_rp_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID Reference Point (angka)"
+            android:inputType="number"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/et_room_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Ruangan (misal: R.AH.1.1)"
+            android:inputType="text"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/et_x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Koordinat X (meter)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/et_y"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Koordinat Y (meter)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Mulai Scan (20x)"
+            android:backgroundTint="#E53935"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_scan_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan: 0/20"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Siap kalibrasi."
+            android:textColor="#424242"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_ap_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:padding="8dp"
+            android:background="#FFFFFF"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btn_save_rp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Simpan RP Ini ke Database"
+            android:backgroundTint="#1565C0"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:id="@+id/ll_rp_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="#FFFFFF"/>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_process"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Proses Semua RP (Pauta + AP Selection)"
+            android:backgroundTint="#E53935"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btn_import"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Import Database"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

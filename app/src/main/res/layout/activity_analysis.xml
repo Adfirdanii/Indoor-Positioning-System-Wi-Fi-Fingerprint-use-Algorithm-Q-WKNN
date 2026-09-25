@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Analisis Parameter"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- BAGIAN 1: Pilih TP, lalu Scan Sweep         -->
+        <!-- (raw scan bahan tuning eta & L)             -->
+        <!-- ══════════════════════════════════════════ -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Pilih Titik Pengujian (TP), lalu Scan Sweep"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_tp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_true_coord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Koordinat sebenarnya: —"
+            android:textSize="13sp"
+            android:textColor="#1565C0"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_tp_scan_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Belum ada scan tersimpan."
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan Sweep (Raw Scan Tuning η dan L)"
+            android:textSize="12sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp"/>
+
+        <Button
+            android:id="@+id/btn_scan_sweep"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="📡 Scan Sweep (10X)"
+            android:backgroundTint="#E65100"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btn_hapus_tp_raw"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Hapus Raw Scan Sweep TP Ini"
+            android:backgroundTint="#B71C1C"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            android:layout_marginBottom="4dp"/>
+
+        <Button
+            android:id="@+id/btn_sweep_semua"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="⚙️ Sweep Semua Kombinasi"
+            android:backgroundTint="#004D40"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tv_result_sweep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13sp"
+            android:padding="16dp"
+            android:background="#FFFFFF"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- BAGIAN 2: Pengujian Formal                  -->
+        <!-- ══════════════════════════════════════════ -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Pengujian Formal"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Isi η dan L terbaik (dari hasil Sweep Semua Kombinasi &amp; menu Lihat Rekap), lalu jalankan pengujian formal (10x scan)."
+            android:textSize="12sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/et_eta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nilai η terbaik (contoh: 6)"
+            android:inputType="numberDecimal"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/et_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nilai L terbaik – jumlah AP (contoh: 30)"
+            android:inputType="number"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btn_scan_pengujian"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="🎯 Scan Pengujian Formal (10x)"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_result_formal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13sp"
+            android:padding="16dp"
+            android:background="#FFFFFF"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btn_hapus_formal_tp"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Hapus Data Pengujian Formal TP Ini"
+            android:backgroundTint="#B71C1C"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btn_rekap"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Lihat Rekap"
+            android:backgroundTint="#1565C0"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hasil Tersimpan"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_result_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="12dp"/>
+
+    </LinearLayout>
+</ScrollView>
