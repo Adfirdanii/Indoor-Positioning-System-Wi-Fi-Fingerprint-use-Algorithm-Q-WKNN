@@ -18,40 +18,35 @@ The application also provides estimated distance and direction (azimuth) toward 
 
 ## Documentation
 
-*(Tambahkan screenshot aplikasi kamu di sini — misalnya tampilan denah/radio map Lantai 1 Gedung AH, halaman kalibrasi, hasil positioning, dan hasil analisis akurasi. Upload gambar ke repo atau ke sebuah image host, lalu sisipkan pakai format `![deskripsi](link-gambar)`.)*
+**Radio Map Lantai 1 Gedung AH:**
 
-Radio Map Lantai 1 Gedung AH:
-![Radio Map Lantai 1] <img width="2084" height="985" alt="denah_ah" src="https://github.com/user-attachments/assets/cafcbc70-d127-4e2b-937c-af05445b010d" />
+<img width="500" alt="denah_ah" src="https://github.com/user-attachments/assets/cafcbc70-d127-4e2b-937c-af05445b010d" />
 
-
-Description of project:
+**Description of project:**
 
 1. Home / Splash Menu
-![Splash_Menu]
-<img width="714" height="1599" alt="WhatsApp Image 2026-07-17 at 6 17 27 PM" src="https://github.com/user-attachments/assets/486b36e4-d1f4-4612-a5a6-2235f3b97970" />
 
-![Home Menu] 
-<img width="714" height="1599" alt="WhatsApp Image 2026-07-17 at 6 12 55 PM" src="https://github.com/user-attachments/assets/8e22386c-596c-4f4a-ab24-d215dd607e3a" />
+<img width="220" alt="Splash Menu" src="https://github.com/user-attachments/assets/486b36e4-d1f4-4612-a5a6-2235f3b97970" />
 
+2. Home Menu
+
+<img width="220" alt="Home Menu" src="https://github.com/user-attachments/assets/8e22386c-596c-4f4a-ab24-d215dd607e3a" />
 
 3. Calibration (Fingerprinting)
-![Calibration]
-<img width="714" height="1599" alt="WhatsApp Image 2026-07-17 at 6 30 55 PM" src="https://github.com/user-attachments/assets/91de7db7-da3e-47df-b129-cad878041e2f" />
 
+<img width="220" alt="Calibration" src="https://github.com/user-attachments/assets/91de7db7-da3e-47df-b129-cad878041e2f" />
 
-5. Result of Positioning
-![Result of Positioning]
-<img width="714" height="1599" alt="WhatsApp Image 2026-07-17 at 6 31 50 PM" src="https://github.com/user-attachments/assets/a5120fd0-3845-4b17-9af0-78fcdead5bca" />
+4. Result of Positioning
 
+<img width="220" alt="Result of Positioning" src="https://github.com/user-attachments/assets/a5120fd0-3845-4b17-9af0-78fcdead5bca" />
 
-7. Floor Map View 
-![Floor Map View]
-<img width="714" height="1599" alt="WhatsApp Image 2026-07-20 at 9 08 06 PM" src="https://github.com/user-attachments/assets/3d3ca520-3569-424c-93eb-67fad04659ba" />
+5. Floor Map View
 
-9. Analysis / Accuracy Result
-![Analysis Result]
-<img width="714" height="1599" alt="WhatsApp Image 2026-07-17 at 6 32 46 PM" src="https://github.com/user-attachments/assets/4a77fa88-ff40-445a-a8d2-ec76c2c41842" />
+<img width="220" alt="Floor Map View" src="https://github.com/user-attachments/assets/3d3ca520-3569-424c-93eb-67fad04659ba" />
 
+6. Analysis / Accuracy Result
+
+<img width="220" alt="Analysis Result" src="https://github.com/user-attachments/assets/4a77fa88-ff40-445a-a8d2-ec76c2c41842" />
 
 ## Built With
 
