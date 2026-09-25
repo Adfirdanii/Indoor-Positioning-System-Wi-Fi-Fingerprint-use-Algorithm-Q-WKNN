@@ -1,113 +1,82 @@
-# Implementasi Algoritma Q-WKNN untuk Indoor Positioning System Menggunakan Wi-Fi Fingerprint Berbasis Android
+# Indoor Positioning System Wi-Fi Fingerprint using Q-WKNN Algorithm
 
-Skripsi — Program Studi Jaringan Telekomunikasi Digital, Jurusan Teknik Elektro, **Politeknik Negeri Malang** (2026)
+This project is a thesis for my Bachelor's Degree (Sarjana Terapan Teknik) in Digital Telecommunication Network, Electrical Engineering Department, State Polytechnic of Malang (Politeknik Negeri Malang), 2026.
 
-**Disusun oleh:** Ade Achmad Firdani (NIM. 1941160113)
-**Dosen Pembimbing:** Ahmad Wilda Yulianto, S.T., M.T. & Ir. Hudiono, M.T.
+This study implements the **Q-Weighted K-Nearest Neighbor (Q-WKNN)** algorithm on an Android-based Indoor Positioning System using Wi-Fi Fingerprinting, with the conventional **WKNN** algorithm used as a performance comparison. The research was conducted on the 1st floor of AH Building, State Polytechnic of Malang.
 
-## 📋 Deskripsi
+This system works on the principle of utilizing Received Signal Strength (RSS) emitted by Wi-Fi Access Points to determine the position of the user indoors, where GPS signals are unreliable. In the design process, a fingerprinting database was built by collecting RSS data at 42 Reference Points (RP) and validating it against 19 Test Points (TP), covering 153 unique detected Access Points.
 
-Global Positioning System (GPS) kehilangan akurasi di dalam ruangan karena sinyal terhalang bangunan. Penelitian ini mengimplementasikan **algoritma Q-WKNN (Q-Weighted K-Nearest Neighbor)** pada aplikasi Android untuk estimasi posisi indoor berbasis **Wi-Fi fingerprinting**, dengan **algoritma WKNN konvensional** sebagai pembanding performa.
+## Result
 
-Lokasi penelitian: **Lantai 1 Gedung AH, Politeknik Negeri Malang**, dengan 42 titik Reference Point (RP), 19 titik Test Point (TP), dan total 153 Access Point (AP) unik yang terdeteksi.
+Based on the test results across 19 Test Points (190 test samples) with optimal parameters η = 4 and L = 70:
 
-## 🎯 Tujuan Penelitian
+- **WKNN** achieved a mean position error of **3.72 m**, while **Q-WKNN** achieved a mean position error of **4.02 m** — WKNN slightly outperformed Q-WKNN in distance accuracy.
+- For **room identification accuracy**, Q-WKNN reached **61.6%**, outperforming WKNN which achieved **48.9%**, particularly in lobby/hallway areas.
+- Overall, no single algorithm was absolutely superior — performance depends on the environment characteristics and which metric is prioritized (distance accuracy vs. room identification accuracy).
 
-1. Merancang dan membangun sistem Indoor Positioning System berbasis Android yang dapat menentukan posisi pengguna serta menampilkan arah dan jarak menuju ruangan tujuan di Lantai 1 Gedung AH
-2. Menerapkan algoritma Q-WKNN, termasuk menentukan nilai optimal parameter **η (eta)** dan **L**, untuk mengestimasi posisi pengguna berdasarkan fingerprint Wi-Fi
-3. Mengetahui perbandingan akurasi estimasi posisi antara algoritma Q-WKNN dengan algoritma WKNN konvensional
+The application also provides estimated distance and direction (azimuth) toward a selected destination room, following the corridor structure of the building.
 
-## 📊 Hasil Penelitian
+## Documentation
 
-- Parameter optimal hasil pengujian sweep dua tahap: **η = 4** dan **L = 70** (dari 153 AP terdeteksi)
-- Pengujian formal pada 19 TP (190 data uji):
-  - **Mean error jarak** — WKNN: 3,72 m | Q-WKNN: 4,02 m (WKNN sedikit lebih unggul dari sisi akurasi jarak)
-  - **Ketepatan penentuan ruangan** — Q-WKNN: 61,6% | WKNN: 48,9% (Q-WKNN lebih unggul, khususnya di area lobi/selasar)
-- Kesimpulan: tidak ada algoritma yang unggul secara mutlak — performa bergantung pada karakteristik lingkungan dan metrik evaluasi yang digunakan (akurasi jarak vs. ketepatan ruangan)
+*(Tambahkan screenshot aplikasi kamu di sini — misalnya tampilan denah/radio map Lantai 1 Gedung AH, halaman kalibrasi, hasil positioning, dan hasil analisis akurasi. Upload gambar ke repo atau ke sebuah image host, lalu sisipkan pakai format `![deskripsi](link-gambar)`.)*
 
-## ✨ Fitur Aplikasi
+Radio Map Lantai 1 Gedung AH:
+![Radio Map Lantai 1] <img width="2084" height="985" alt="denah_ah" src="https://github.com/user-attachments/assets/cafcbc70-d127-4e2b-937c-af05445b010d" />
 
-- **Kalibrasi (Fingerprinting)** — perekaman data RSSI di titik-titik Reference Point
-- **Positioning real-time** — estimasi posisi pengguna berdasarkan pemindaian Wi-Fi terkini menggunakan Q-WKNN & WKNN
-- **Visualisasi denah** — peta lantai interaktif menampilkan posisi hasil estimasi
-- **Perhitungan jarak & arah navigasi** — menampilkan estimasi jarak dan arah (azimuth) menuju ruangan tujuan (mengikuti struktur koridor)
-- **Analisis akurasi** — perbandingan performa algoritma terhadap dataset uji
-- **Validasi dengan dataset publik** — pengujian implementasi algoritma menggunakan dataset Zenodo (UJIIndoorLoc, DOI: 10.5281/zenodo.1066041) sebelum diuji pada data mandiri
-- **Rekap data** — riwayat hasil positioning
 
-## 🛠️ Teknologi & Alat/Bahan
+Description of project:
 
-| Kategori | Alat/Bahan | Keterangan |
-|---|---|---|
-| Hardware | Smartphone Android | Wi-Fi scanning & menjalankan aplikasi |
-| Hardware | Access Point Wi-Fi (IEEE 802.11) | Sumber sinyal RSS di Gedung AH |
-| Hardware | Meteran | Pengukuran koordinat RP/TP |
-| Software | Android Studio | IDE pengembangan aplikasi |
-| Software | Java | Bahasa pemrograman aplikasi & algoritma |
-| Software | Microsoft Excel | Pengolahan & analisis data hasil pengujian |
-| Dataset | Zenodo (UJIIndoorLoc) | Validasi kebenaran implementasi algoritma |
+1. Home / Splash Menu
+![Splash_Menu]
+<img width="714" height="1599" alt="WhatsApp Image 2026-07-17 at 6 17 27 PM" src="https://github.com/user-attachments/assets/486b36e4-d1f4-4612-a5a6-2235f3b97970" />
 
+![Home Menu] 
+<img width="714" height="1599" alt="WhatsApp Image 2026-07-17 at 6 12 55 PM" src="https://github.com/user-attachments/assets/8e22386c-596c-4f4a-ab24-d215dd607e3a" />
+
+
+3. Calibration (Fingerprinting)
+![Calibration]
+<img width="714" height="1599" alt="WhatsApp Image 2026-07-17 at 6 30 55 PM" src="https://github.com/user-attachments/assets/91de7db7-da3e-47df-b129-cad878041e2f" />
+
+
+5. Result of Positioning
+![Result of Positioning]
+<img width="714" height="1599" alt="WhatsApp Image 2026-07-17 at 6 31 50 PM" src="https://github.com/user-attachments/assets/a5120fd0-3845-4b17-9af0-78fcdead5bca" />
+
+
+7. Floor Map View 
+![Floor Map View]
+<img width="714" height="1599" alt="WhatsApp Image 2026-07-20 at 9 08 06 PM" src="https://github.com/user-attachments/assets/3d3ca520-3569-424c-93eb-67fad04659ba" />
+
+9. Analysis / Accuracy Result
+![Analysis Result]
+<img width="714" height="1599" alt="WhatsApp Image 2026-07-17 at 6 32 46 PM" src="https://github.com/user-attachments/assets/4a77fa88-ff40-445a-a8d2-ec76c2c41842" />
+
+
+## Built With
+
+- **Language:** Java
 - **Platform:** Android (min SDK 24, target SDK 35)
 - **Build tool:** Gradle (Kotlin DSL)
+- **IDE:** Android Studio
 
-## 📐 Metode Perhitungan
+## How to Run
 
-- **Manhattan Distance** berbasis transformasi Q — untuk penentuan ruangan (Q-WKNN)
-- **Euclidean Distance** — untuk pengukuran akurasi posisi (mean error & P75 error)
-
-## 📁 Struktur Proyek
-
-```
-app/src/main/java/com/implementasi/myqwknn/
-├── algorithm/          # Implementasi algoritma positioning
-│   ├── QWKNNAlgorithm.java
-│   ├── WKNNAlgorithm.java
-│   ├── DataPreprocessor.java   # AP Selection, preprocessing data
-│   └── PositioningEngine.java
-├── database/            # Pengelolaan data fingerprint
-│   └── FingerprintDatabase.java
-├── model/               # Model data
-│   ├── AccessPoint.java
-│   ├── ReferencePoint.java
-│   └── PositionResult.java
-├── scanner/             # Pemindaian sinyal Wi-Fi
-│   └── WifiScanner.java
-├── ui/                  # Activity & tampilan
-│   ├── CalibrationActivity.java   # Kalibrasi / fingerprinting
-│   ├── PositioningActivity.java   # Estimasi posisi real-time
-│   ├── AnalysisActivity.java      # Analisis akurasi
-│   ├── FloorMapView.java          # Visualisasi denah
-│   ├── ZenodoActivity.java        # Validasi dataset publik
-│   └── ...
-└── MainActivity.java
-
-app/src/main/assets/     # Dataset training (RP) & testing (TP): RSSI + koordinat
-```
-
-## 🚀 Cara Menjalankan
-
-1. Clone repository ini
+1. Clone this repository
    ```bash
    git clone https://github.com/Adfirdanii/Indoor-Positioning-System-Wi-Fi-Fingerprint-use-Algorithm-Q-WKNN.git
    ```
-2. Buka project menggunakan **Android Studio**
-3. Tunggu proses Gradle sync selesai
-4. Sambungkan perangkat Android (atau emulator yang mendukung Wi-Fi scanning)
-5. Klik **Run** ▶️
+2. Open the project with **Android Studio**
+3. Wait for Gradle sync to finish
+4. Connect an Android device (or emulator with Wi-Fi scanning support)
+5. Click **Run** ▶️
 
-## 💡 Saran Pengembangan Selanjutnya
-
-1. Menambah uji parameter di berbagai kondisi lantai dan kelengkapan data fingerprint per ruangan
-2. Memperbanyak pengambilan data fingerprint agar sebaran RP lebih merata dan mean error lebih kecil
-3. Mengganti navigasi berbasis aturan tetap (mengikuti struktur koridor) dengan algoritma pencarian jalur terpendek (Dijkstra/A*)
-4. Menambahkan fitur augmented reality atau posisi koordinat real-time untuk navigasi yang lebih jelas
-
-## 📚 Referensi Utama
+## References
 
 1. R. Zhou, Y. Yang, and P. Chen, "An RSS Transform—Based WKNN for Indoor Positioning," *Sensors*, vol. 21, no. 17, p. 5685, 2021.
 2. A. P. H. Yulianto, M. N. Zakaria, and A. W. Yulianto, "Indoor Positioning and Navigating System Application Using Wi-Fi with Fingerprinting Method and Weighted K-Nearest Neighbor Algorithm," *Jurnal Jaringan Telekomunikasi*, vol. 12, no. 3, 2022.
-3. S. Liu, R. de Lacerda, and J. Fiorina, "Performance Analysis of Adaptive K for Weighted K-Nearest Neighbor Based Indoor Positioning," in *Proc. 2022 IEEE 95th VTC2022-Spring*, Helsinki, Finland, Jun. 2022.
 
-## 📄 Lisensi
+For further information, feel free to reach out:
 
-Proyek ini dibuat untuk keperluan Tugas Akhir/Skripsi, Politeknik Negeri Malang, 2026.
+email: adeachmdd@gmail.com
+instagram: adfirdann
