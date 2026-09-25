@@ -1,6 +1,6 @@
 # Indoor Positioning System — Wi-Fi Fingerprinting dengan Algoritma Q-WKNN
 
-Aplikasi Android untuk sistem penentuan posisi dalam ruangan (indoor positioning) menggunakan metode Wi-Fi fingerprinting dengan algoritma **Q-WKNN (Quality-based Weighted K-Nearest Neighbor)**. Dikembangkan sebagai proyek skripsi.
+Aplikasi Android untuk sistem penentuan posisi dalam ruangan (indoor positioning) menggunakan metode Wi-Fi fingerprinting dengan algoritma **Q-WKNN (Q-based Weighted K-Nearest Neighbor)**. Dikembangkan sebagai proyek skripsi.
 
 ## 📋 Deskripsi
 
